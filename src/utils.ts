@@ -3,10 +3,13 @@ import * as d3 from 'd3';
 import { MinMaxPair, Scale, Word } from './types';
 
 export function choose<T = number | string>(array: T[]): T {
-  return array[Math.floor(Math.random() * array.length)];
+  //return array[Math.floor(Math.random() * array.length)];
+  console.log(array)
+  return array[0];
 }
 
 export function getDefaultColors(): string[] {
+  console.log("GDC")
   return d3
     .range(20)
     .map(number => number.toString())
