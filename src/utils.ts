@@ -5,7 +5,6 @@ import { MinMaxPair, Scale, Word } from './types';
 export function choose<T = number | string>(array: T[], word: any): T {
   //return array[Math.floor(Math.random() * array.length)];
   const emotion = word.sentiment
-  console.log(emotion + " at index " + colorChoose(emotion,array.length))
   return array[colorChoose(emotion, array.length)];
 }
 
@@ -25,6 +24,9 @@ export function colorChoose(emotion: string, lencolor: number) {
       index = 3;
       break;
     case "anger":
+      index = 4;
+      break;
+    case "neutral":
       index = 4;
       break;
     default:

@@ -15,7 +15,7 @@ const MAX_LAYOUT_ATTEMPTS = 10;
 const SHRINK_FACTOR = 0.95;
 
 export const defaultCallbacks: Callbacks = {
-  getWordTooltip: ({ text, value }: Word) => `${text} (${value})`,
+  getWordTooltip: ({ text, value, sentiment }: Word) => `${text} Frequency: ${value}, Emotion: ${sentiment}`,
 };
 
 export const defaultOptions: Options = {

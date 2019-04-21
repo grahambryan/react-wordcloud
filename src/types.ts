@@ -42,4 +42,5 @@ export interface Options {
 export interface Word extends CloudWord {
   text: string;
   value: number;
+  sentiment: string;
 }
