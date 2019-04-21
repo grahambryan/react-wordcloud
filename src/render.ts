@@ -23,6 +23,7 @@ export default function render(
   const { fontFamily, transitionDuration } = options;
 
   function getFill(word: Word): string {
+    console.log(word)
     return getWordColor ? getWordColor(word) : choose(colors);
   }
 
