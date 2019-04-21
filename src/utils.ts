@@ -27,7 +27,7 @@ export function colorChoose(emotion: string, lencolor: number) {
       index = 4;
       break;
     case "neutral":
-      index = 4;
+      index = 5;
       break;
     default:
       index = Math.floor(Math.random() * lencolor);
