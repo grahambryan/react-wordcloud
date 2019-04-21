@@ -22,10 +22,7 @@ export default function render(
   const { colors, enableTooltip, fontStyle, fontWeight } = options;
   const { fontFamily, transitionDuration } = options;
 
-  function getFill(word: Word): string {
-    console.log("trying to print ", word)
-    console.log("trying to colors ", colors)
-    console.log(words)
+  function getFill(word) {
     return getWordColor ? getWordColor(word) : choose(colors, word);
   }
 

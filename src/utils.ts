@@ -5,12 +5,14 @@ import { MinMaxPair, Scale, Word } from './types';
 export function choose<T = number | string>(array: T[], word: any): T {
   //return array[Math.floor(Math.random() * array.length)];
   console.log(array)
+  console.log("trying to get the word")
   console.log(word)
   return array[0];
 }
 
-export function getDefaultColors(): string[] {
+export function getDefaultColors(word: Word): string[] {
   console.log("GDC")
+  console.log(word)
   return d3
     .range(20)
     .map(number => number.toString())
