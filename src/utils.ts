@@ -2,9 +2,10 @@ import * as d3 from 'd3';
 
 import { MinMaxPair, Scale, Word } from './types';
 
-export function choose<T = number | string>(array: T[]): T {
+export function choose<T = number | string>(array: T[], word: any): T {
   //return array[Math.floor(Math.random() * array.length)];
   console.log(array)
+  console.log(word)
   return array[0];
 }
 
