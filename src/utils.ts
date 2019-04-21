@@ -4,15 +4,36 @@ import { MinMaxPair, Scale, Word } from './types';
 
 export function choose<T = number | string>(array: T[], word: any): T {
   //return array[Math.floor(Math.random() * array.length)];
-  console.log(array)
-  console.log("trying to get the word")
-  console.log(word)
-  return array[0];
+  const emotion = word.sentiment
+  console.log(emotion + " at index " + colorChoose(emotion,array.length))
+  return array[colorChoose(emotion, array.length)];
 }
 
-export function getDefaultColors(word: Word): string[] {
-  console.log("GDC")
-  console.log(word)
+export function colorChoose(emotion: string, lencolor: number) {
+  var index;
+  switch(emotion) {
+    case "sadness":
+      index = 0;
+      break;
+    case "joy":
+      index = 1;
+      break;
+    case "fear":
+      index = 2;
+      break;
+    case "disgust":
+      index = 3;
+      break;
+    case "anger":
+      index = 4;
+      break;
+    default:
+      index = Math.floor(Math.random() * lencolor);
+  }
+  return index
+}
+
+export function getDefaultColors(): string[] {
   return d3
     .range(20)
     .map(number => number.toString())
